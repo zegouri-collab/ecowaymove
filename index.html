@@ -3,79 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoWayMove pour les écoles - Activités pédagogiques interactives</title>
-  <meta name="description" content="EcoWayMove propose des animations et ateliers interactifs pour les écoles, classes et centres périscolaires. Apprentissage ludique, sport, bien-être et cohésion.">
+  <title>EcoWayMove : Mur interactif, jeux éducatifs et animations à Grenoble</title>
+  <meta name="description" content="EcoWayMove transforme votre mur en espace interactif pour jeux, animations et apprentissage. Idéal pour écoles, entreprises et événements à Grenoble et partout en France.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
-  <meta property="og:title" content="EcoWayMove pour les écoles">
-  <meta property="og:description" content="Animations interactives et pédagogiques pour écoles, classes et centres périscolaires.">
+
+  <!-- Open Graph / Réseaux sociaux -->
+  <meta property="og:title" content="EcoWayMove - Mur interactif à Grenoble">
+  <meta property="og:description" content="Transformez votre mur en espace de jeux et d'apprentissage interactif.">
   <meta property="og:image" content="https://www.ecowaytec.com/ima1.jpg">
-  <meta property="og:url" content="https://www.ecowaytec.com/ecoles.html">
+  <meta property="og:url" content="https://www.ecowaytec.com/">
   <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;400&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X7E9HDZFZY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X7E9HDZFZY');
+  </script>
+
   <style>
-    body {
-      font-family: 'Montserrat', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f9fb;
-      color: #222;
-    }
-    header {
-      background: #0072ff;
-      color: #fff;
-      padding: 24px 0 12px 0;
+    /* Effet 3D sur le texte d'intro */
+    .intro-3d {
       text-align: center;
-    }
-    header img {
-      max-width: 120px;
-      margin-bottom: 10px;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 16px 0;
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-    }
-    nav a {
+      font-size: 2.1em;
+      font-weight: 800;
       color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.2s;
+      text-shadow:
+        2px 2px 0 #0072ff,
+        4px 4px 0 #00c6ff,
+        6px 6px 8px #2222;
+      background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+      border-radius: 18px;
+      padding: 24px 12px 18px 12px;
+      margin: 32px auto 24px auto;
+      max-width: 700px;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 24px rgba(0,114,255,0.13);
     }
-    nav a:hover {
-      color: #ffe600;
+    /* Centrage des points forts */
+    .features-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 32px 0 0 0;
     }
-    main {
-      max-width: 800px;
-      margin: 32px auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,114,255,0.07);
-      padding: 32px 24px;
+    .features-section ul {
+      text-align: left;
+      margin: 0 auto;
+      padding-left: 0;
+      list-style: none;
     }
-    h1 {
+    .features-section li {
+      margin: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      font-size: 1.1em;
+    }
+    .features-section li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
       color: #0072ff;
-      font-size: 2.2em;
-      margin-bottom: 12px;
+      font-weight: bold;
     }
-    h2 {
-      color: #00c6ff;
-      margin-top: 32px;
+    .highlight-yellow.bold {
+      display: block;
+      text-align: center;
+      margin: 0 auto 18px auto;
+      font-size: 1.2em;
+      background: #ffe600;
+      color: #222;
+      font-weight: bold;
+      padding: 6px 18px;
+      border-radius: 8px;
+      max-width: 400px;
     }
+    /* Centrage du bouton */
     .cta-btn {
-      display: inline-block;
-      margin: 24px 0;
+      display: block;
+      margin: 28px auto 0 auto;
       background: #0072ff;
       color: white;
-      padding: 12px 28px;
+      padding: 14px 32px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 1.1em;
+      font-size: 1.15em;
       font-weight: 600;
-      text-decoration: none;
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
       transition: background 0.3s, transform 0.2s;
     }
@@ -84,116 +103,108 @@
       transform: translateY(-2px) scale(1.03);
       outline: none;
     }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin: 24px 0;
-      justify-content: center;
-    }
-    .gallery figure {
-      background: #f0f6ff;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,114,255,0.07);
-      padding: 10px;
-      width: 180px;
-      text-align: center;
-    }
-    .gallery img {
-      max-width: 100%;
-      border-radius: 6px;
-    }
-    .testimonial {
-      background: #e6f3ff;
-      border-left: 4px solid #0072ff;
-      margin: 24px 0;
-      padding: 16px 18px;
-      border-radius: 8px;
-      font-style: italic;
-    }
-    footer {
-      text-align: center;
-      color: #888;
-      font-size: 0.95em;
-      margin: 32px 0 12px 0;
-    }
-    @media (max-width: 600px) {
-      main { padding: 12px 4vw; }
-      .gallery { flex-direction: column; align-items: center; }
+    /* Responsive */
+    @media (max-width: 700px) {
+      .intro-3d {
+        font-size: 1.2em;
+        padding: 14px 4vw 12px 4vw;
+      }
+      .highlight-yellow.bold {
+        font-size: 1em;
+        padding: 4px 8px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="ecowayteclogo.jpg" alt="Logo EcoWayTec">
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="ecoles.html">Écoles</a></li>
-        <li><a href="mairies.html">Mairies</a></li>
-        <li><a href="entreprises.html">Entreprises</a></li>
-        <li><a href="associations.html">Associations</a></li>
-        <li><a href="anniversaires.html">Anniversaires</a></li>
-      </ul>
-    </nav>
-    <h1>EcoWayMove pour les écoles</h1>
-    <p>Des activités pédagogiques et ludiques pour dynamiser l’apprentissage !</p>
-  </header>
-  <main>
-    <section>
-      <h2>Pourquoi choisir EcoWayMove à l’école ?</h2>
-      <ul>
-        <li>Apprentissage interactif et ludique pour tous les niveaux</li>
-        <li>Développement de la motricité, de la coopération et de la créativité</li>
-        <li>Animations sportives, ateliers bien-être, jeux éducatifs</li>
-        <li>Installation simple, sans accessoires ni connexion internet</li>
-        <li>Adapté aux classes, centres de loisirs, temps périscolaires</li>
-      </ul>
+  <div class="main-wrapper">
+
+    <!-- Logo et annonce -->
+    <header class="header-annonce">
+      <img src="ecowayteclogo.jpg" alt="Logo EcoWayTec, mur interactif à Grenoble" class="logo">
+      <div class="annonce">Nouvelle Activité !</div>
+    </header>
+
+    <!-- Intro avec effet 3D -->
+    <section class="intro-section">
+      <h1 class="intro-3d">
+        Découvrez <b>EcoWayMove</b>, le mur interactif qui fait bouger et apprendre autrement.
+      </h1>
     </section>
 
-    <section>
-      <h2>Exemples d’activités</h2>
-      <div class="gallery">
+    <!-- Galerie d'images -->
+    <section class="gallery-section">
+      <h2>EcoWayMove en action</h2>
+      <div class="gallery-grid">
         <figure>
-          <img src="ima1.jpg" alt="Jeu de bowling interactif à l'école">
+          <img src="ima1.jpg" alt="Jeu de bowling interactif EcoWayMove à Grenoble">
           <figcaption>Bowling interactif</figcaption>
         </figure>
         <figure>
-          <img src="ima2.jpg" alt="Jeu éducatif mathématiques à l'école">
+          <img src="ima2.jpg" alt="Jeu éducatif mathématiques EcoWayMove">
           <figcaption>Jeu éducatif mathématiques</figcaption>
         </figure>
         <figure>
-          <img src="ima4.jpg" alt="Atelier yoga et bien-être à l'école">
+          <img src="ima3.jpg" alt="Football interactif EcoWayMove">
+          <figcaption>Football interactif</figcaption>
+        </figure>
+        <figure>
+          <img src="ima4.jpg" alt="Yoga et bien-être avec EcoWayMove">
           <figcaption>Yoga et bien-être</figcaption>
+        </figure>
+        <figure>
+          <img src="ima5.jpg" alt="Jeu collectif en salle EcoWayMove">
+          <figcaption>Jeu collectif en salle</figcaption>
+        </figure>
+        <figure>
+          <img src="ima6.jpg" alt="Jeu de réflexe interactif EcoWayMove">
+          <figcaption>Jeu de réflexe</figcaption>
         </figure>
       </div>
     </section>
 
-    <section>
-      <h2>Témoignages</h2>
-      <div class="testimonial">
-        "Les élèves adorent ! Ils apprennent en bougeant, et l’ambiance en classe est transformée." <br>
-        <b>— Mme Dupont, enseignante à Grenoble</b>
-      </div>
-      <div class="testimonial">
-        "Une animation originale pour notre fête d’école, facile à mettre en place et adaptée à tous les âges." <br>
-        <b>— Directeur d’école primaire</b>
-      </div>
+    <!-- Présentation détaillée -->
+    <section class="presentation-section">
+      <h2 class="highlight-pink"><a href="#">Qu’est-ce que EcoWayMove ?</a></h2>
+      <p>
+        <b>EcoWayMove</b> transforme n’importe quel mur blanc en un espace de jeu et d’apprentissage interactif.
+        Avec un vidéoprojecteur et une technologie de détection de mouvements, petits et grands interagissent naturellement, sans accessoires.
+        Une expérience immersive, simple à installer et pensée pour tous les âges.
+      </p>
+      <a href="mailto:ecowaytec@gmail.com" class="cta-btn">Demander des infos</a>
     </section>
 
-    <section>
-      <h2>Contact & réservation</h2>
-      <p>
-        Intéressé(e) par une animation ou un atelier dans votre école ?<br>
-        <a href="mailto:ecowaytec@gmail.com" class="cta-btn">Demander un devis ou une démonstration</a>
-      </p>
+    <!-- Points forts -->
+    <div class="highlight-yellow bold">Les points forts d’EcoWayMove :</div>
+    <section class="features-section">
+      <ul>
+        <li>Installation simple (un mur, une prise, un vidéoprojecteur)</li>
+        <li>Jusqu’à 16 joueurs en simultané</li>
+        <li>Fonctionne sans internet – 100% hors ligne</li>
+        <li>Plus de 50 jeux inclus</li>
+        <li>Création facile de vos propres jeux</li>
+        <li>Sans casque ni objets connectés</li>
+      </ul>
     </section>
-    <p style="text-align:center;">
-      <a href="index.html">← Retour à l'accueil</a>
-    </p>
-  </main>
-  <footer>
-    © 2025 EcoWayMove - Grenoble | <a href="https://www.ecowaytec.com" target="_blank">ecowaytec.com</a>
-  </footer>
+
+    <!-- Image Exploration créative en grand -->
+    <section class="exploration-section">
+      <figure>
+        <img src="ima7.jpg" alt="Exploration créative avec EcoWayMove" class="exploration-img">
+        <figcaption>Exploration créative</figcaption>
+      </figure>
+    </section>
+
+    <!-- Contact final -->
+    <section class="contact-section">
+      <h3>N’hésitez pas à nous contacter si ce concept vous intéresse.</h3>
+      <a href="mailto:ecowaytec@gmail.com" class="cta-btn">Contactez-nous</a>
+    </section>
+
+    <footer>
+      <p>© 2025 EcoWayMove - Grenoble | Tél : 06 31 63 90 79 | <a href="https://www.ecowaytec.com" target="_blank">ecowaytec.com</a></p>
+    </footer>
+  </div>
 </body>
 </html>
+
