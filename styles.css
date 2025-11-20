@@ -184,9 +184,9 @@ header nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--dark-color), #1a252f);
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600') no-repeat center center/cover;
     color: var(--white);
-    padding: 120px 0;
+    padding: 140px 0 120px;
     text-align: center;
     position: relative;
 }
@@ -262,11 +262,12 @@ header nav {
 
 .card {
     background: var(--white);
-    padding: 40px 30px;
+    padding: 0 0 30px 0;
     border-radius: 20px;
     transition: all 0.3s ease;
     box-shadow: var(--shadow-soft);
     border: 1px solid rgba(0,0,0,0.02);
+    overflow: hidden;
 }
 
 .card:hover {
@@ -274,16 +275,19 @@ header nav {
     box-shadow: var(--shadow-hover);
 }
 
-.icon-wrapper {
-    font-size: 3.5rem;
-    margin-bottom: 25px;
-    color: var(--primary-color);
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 20px;
 }
 
 .card h3 {
     color: var(--dark-color);
     font-size: 1.3rem;
     font-weight: 600;
+    padding: 0 25px;
 }
 
 /* About Section */
