@@ -29,9 +29,8 @@
   <nav class="navbar">
     <div class="container navbar-content">
       <div class="brand">
-        <!-- Fallback text if image fails, though we try to load image -->
-        <img src="ecowayteclogo.jpg" alt="EcoWayMove" class="nav-logo">
-        <span class="brand-text">EcoWayMove</span>
+        <!-- Logo only, text removed for cleaner dark integration -->
+        <img src="ecowayteclogo.jpg" alt="EcoWayTec" class="nav-logo">
       </div>
       <div class="nav-actions">
         <span class="badge-new">Nouvelle Activité !</span>
@@ -44,22 +43,16 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="container hero-container">
-        <div class="hero-content">
-          <h1 class="hero-title">Le mur interactif qui <br><span class="text-gradient">réinvente le mouvement.</span></h1>
-          <p class="hero-subtitle">
-            Transformez n'importe quel mur en surface de jeu et d'apprentissage. 
-            Une expérience immersive pour l'éducation, le sport et l'événementiel.
-          </p>
-          <div class="hero-buttons">
-            <button id="contactBtn1" class="btn btn-primary">Demander une démo</button>
-            <a href="#features" class="btn btn-outline">Découvrir les avantages</a>
-          </div>
-          <div id="contactMessage1" class="contact-message-box"></div>
+        <h1 class="hero-title">Le mur interactif qui <br><span class="text-gradient">réinvente le mouvement.</span></h1>
+        <p class="hero-subtitle">
+          Transformez n'importe quel mur en surface de jeu et d'apprentissage. 
+          Une expérience immersive pour l'éducation, le sport et l'événementiel.
+        </p>
+        <div class="hero-buttons">
+          <button id="contactBtn1" class="btn btn-primary">Demander une démo</button>
+          <a href="#features" class="btn btn-outline">Découvrir les avantages</a>
         </div>
-        <!-- We don't have a hero image asset, so we use a decorative abstract element or CSS shape in styles -->
-        <div class="hero-visual">
-           <div class="abstract-shape"></div>
-        </div>
+        <div id="contactMessage1" class="contact-message-box"></div>
       </div>
     </section>
 
@@ -222,6 +215,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Retour en haut">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
 
   <script src="script.js"></script>
 </body>
