@@ -3,19 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoWayMove : Mur interactif, jeux éducatifs et animations à Grenoble</title>
-  <meta name="description" content="EcoWayMove transforme votre mur en espace interactif pour jeux, animations et apprentissage. Idéal pour écoles, entreprises et événements à Grenoble et partout en France.">
+  <title>EcoWayMove : Mur interactif & Jeux éducatifs</title>
+  <meta name="description" content="EcoWayMove transforme votre mur en espace interactif pour jeux, animations et apprentissage. Idéal pour écoles, entreprises et événements.">
+  
+  <!-- Fonts: Inter for UI, optional specific display font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-  <!-- Open Graph / Réseaux sociaux -->
-  <meta property="og:title" content="EcoWayMove - Mur interactif à Grenoble">
-  <meta property="og:description" content="Transformez votre mur en espace de jeux et d'apprentissage interactif.">
-  <meta property="og:image" content="https://www.ecowaytec.com/ima1.jpg">
-  <meta property="og:url" content="https://www.ecowaytec.com/">
-  <meta property="og:type" content="website">
-
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X7E9HDZFZY"></script>
@@ -28,119 +25,201 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-content">
-      <img src="ecowayteclogo.jpg" alt="Logo EcoWayTec, mur interactif à Grenoble" class="logo">
-      <div class="badge">Nouvelle Activité !</div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-content">
+      <div class="brand">
+        <!-- Fallback text if image fails, though we try to load image -->
+        <img src="ecowayteclogo.jpg" alt="EcoWayMove" class="nav-logo">
+        <span class="brand-text">EcoWayMove</span>
+      </div>
+      <div class="nav-actions">
+        <span class="badge-new">Nouvelle Activité !</span>
+        <button id="navContactBtn" class="btn btn-primary btn-sm">Contact</button>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <main>
     <!-- Hero Section -->
     <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Le mur interactif qui <br><span class="text-gradient">réinvente le mouvement.</span></h1>
+          <p class="hero-subtitle">
+            Transformez n'importe quel mur en surface de jeu et d'apprentissage. 
+            Une expérience immersive pour l'éducation, le sport et l'événementiel.
+          </p>
+          <div class="hero-buttons">
+            <button id="contactBtn1" class="btn btn-primary">Demander une démo</button>
+            <a href="#features" class="btn btn-outline">Découvrir les avantages</a>
+          </div>
+          <div id="contactMessage1" class="contact-message-box"></div>
+        </div>
+        <!-- We don't have a hero image asset, so we use a decorative abstract element or CSS shape in styles -->
+        <div class="hero-visual">
+           <div class="abstract-shape"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Props -->
+    <section id="features" class="features-section">
       <div class="container">
-        <h1 class="hero-title">Découvrez <span>EcoWayMove</span></h1>
-        <p class="hero-subtitle">Le mur interactif qui fait bouger et apprendre autrement.</p>
-        <button id="contactBtn1" class="btn">Demander une démo</button>
-        <div id="contactMessage"></div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="container">
-      <h2 class="section-title">EcoWayMove <span>en action</span></h2>
-      <div class="gallery-grid">
-        <article class="card">
-          <img src="ima1.jpg" alt="Jeu de bowling interactif EcoWayMove à Grenoble">
-          <div class="card-content">
-            <h3 class="card-title">Bowling interactif</h3>
-          </div>
-        </article>
-        <article class="card">
-          <img src="ima2.jpg" alt="Jeu éducatif mathématiques EcoWayMove">
-          <div class="card-content">
-            <h3 class="card-title">Jeu éducatif mathématiques</h3>
-          </div>
-        </article>
-        <article class="card">
-          <img src="ima3.jpg" alt="Football interactif EcoWayMove">
-          <div class="card-content">
-            <h3 class="card-title">Football interactif</h3>
-          </div>
-        </article>
-        <article class="card">
-          <img src="ima4.jpg" alt="Yoga et bien-être avec EcoWayMove">
-          <div class="card-content">
-            <h3 class="card-title">Yoga et bien-être</h3>
-          </div>
-        </article>
-        <article class="card">
-          <img src="ima5.jpg" alt="Jeu collectif en salle EcoWayMove">
-          <div class="card-content">
-            <h3 class="card-title">Jeu collectif</h3>
-          </div>
-        </article>
-        <article class="card">
-          <img src="ima6.jpg" alt="Jeu de réflexe interactif EcoWayMove">
-          <div class="card-content">
-            <h3 class="card-title">Jeu de réflexe</h3>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Features / Presentation -->
-    <section class="container">
-      <div class="features-wrapper">
+        <div class="section-header">
+          <h2 class="section-title">Pourquoi choisir EcoWayMove ?</h2>
+          <p class="section-desc">Une technologie accessible, sans contraintes, pour un plaisir immédiat.</p>
+        </div>
+        
         <div class="features-grid">
-          <div>
-            <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Qu’est-ce que <br><span>EcoWayMove ?</span></h2>
-            <p>
-              <strong>EcoWayMove</strong> transforme n’importe quel mur blanc en un espace de jeu et d’apprentissage interactif.
-              Avec un vidéoprojecteur et une technologie de détection de mouvements, petits et grands interagissent naturellement, sans accessoires.
-            </p>
-            <p>Une expérience immersive, simple à installer et pensée pour tous les âges.</p>
-            <button id="contactBtn2" class="btn" style="margin-top: 1rem;">En savoir plus</button>
+          <div class="feature-item">
+            <div class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+            </div>
+            <h3>Installation Rapide</h3>
+            <p>Un mur, une prise, un vidéoprojecteur. Prêt en quelques minutes.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Multi-joueurs</h3>
+            <p>Jusqu'à 16 joueurs en simultané pour favoriser la cohésion.</p>
+          </div>
+          <div class="feature-item">
+             <div class="icon-box">
+                <!-- Plug icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"></path><path d="M9 8V2"></path><path d="M15 8V2"></path><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"></path></svg>
+             </div>
+             <h3>100% Hors Ligne</h3>
+             <p>Fonctionne parfaitement sans connexion internet. Aucune interruption.</p>
           </div>
           
-          <div>
-            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Les points forts :</h3>
-            <ul class="features-list">
-              <li>Installation simple (mur, prise, vidéoprojecteur)</li>
-              <li>Jusqu’à 16 joueurs en simultané</li>
-              <li>Fonctionne sans internet – 100% hors ligne</li>
-              <li>Plus de 50 jeux inclus</li>
-              <li>Création facile de vos propres jeux</li>
-              <li>Sans casque ni objets connectés</li>
-            </ul>
+          <div class="feature-item">
+            <div class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"></rect><path d="M6 12h.01"></path><path d="M18 12h.01"></path><path d="M2 6v12"></path><path d="M22 6v12"></path></svg> 
+              <!-- Gamepad-ish -->
+            </div>
+            <h3>50+ Jeux Inclus</h3>
+            <p>Sport, éducation, réflexe... Une bibliothèque complète et variée.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Big Image Section -->
-    <section class="container">
-      <div class="card" style="max-width: 900px; margin: 0 auto;">
-        <img src="ima7.jpg" alt="Exploration créative avec EcoWayMove" style="height: auto; max-height: 500px;">
-        <div class="card-content">
-          <h3 class="card-title">Exploration créative sans limites</h3>
+    <!-- Gallery / Use Cases -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Expériences Immersives</h2>
+          <p class="section-desc">Découvrez nos modules conçus pour tous les publics.</p>
+        </div>
+        
+        <div class="gallery-grid">
+          <div class="card">
+            <div class="card-image-wrapper">
+              <img src="ima1.jpg" alt="Bowling interactif" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Bowling Interactif</h3>
+              <p>Le classique revisité en version numérique.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image-wrapper">
+              <img src="ima2.jpg" alt="Jeu éducatif" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Éducation Ludique</h3>
+              <p>Apprendre les maths et le français en bougeant.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image-wrapper">
+              <img src="ima3.jpg" alt="Football interactif" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Football & Précision</h3>
+              <p>Entraînez votre tir sur des cibles dynamiques.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image-wrapper">
+              <img src="ima4.jpg" alt="Yoga et bien-être" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Bien-être & Yoga</h3>
+              <p>Des séances guidées pour la relaxation.</p>
+            </div>
+          </div>
+           <div class="card">
+            <div class="card-image-wrapper">
+              <img src="ima5.jpg" alt="Jeu collectif" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Jeux Collectifs</h3>
+              <p>Renforcez l'esprit d'équipe.</p>
+            </div>
+          </div>
+           <div class="card">
+            <div class="card-image-wrapper">
+              <img src="ima6.jpg" alt="Jeu de réflexe" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Réflexes & Vitesse</h3>
+              <p>Testez votre rapidité d'action.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="container" style="text-align: center; padding-bottom: 80px;">
-      <h2 class="section-title">Prêt à transformer votre espace ?</h2>
-      <p style="font-size: 1.2rem; margin-bottom: 30px; color: var(--text-light);">Contactez-nous pour discuter de votre projet.</p>
-      <button id="contactBtn3" class="btn">Contactez-nous</button>
+    <!-- Highlight Section -->
+    <section class="highlight-section">
+      <div class="container split-layout">
+        <div class="highlight-content">
+          <h2>Libérez la créativité</h2>
+          <p>
+            EcoWayMove n'est pas seulement une console de jeu géante. C'est un outil de création.
+            Les enseignants et animateurs peuvent concevoir leurs propres activités adaptées à leur public.
+            Sans manettes, sans casques VR, juste le mouvement naturel du corps.
+          </p>
+          <button id="contactBtn2" class="btn btn-primary">En savoir plus</button>
+          <div id="contactMessage2" class="contact-message-box"></div>
+        </div>
+        <div class="highlight-image">
+          <img src="ima7.jpg" alt="Créativité sans limites" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Footer -->
+    <section class="cta-footer">
+      <div class="container">
+        <h2>Prêt à lancer votre projet ?</h2>
+        <p>Discutons de vos besoins et transformons votre espace dès aujourd'hui.</p>
+        <button id="contactBtn3" class="btn btn-white">Contactez-nous</button>
+        <div id="contactMessage3" class="contact-message-box"></div>
+      </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 EcoWayMove - Grenoble | Tél : 06 31 63 90 79 | <a href="https://www.ecowaytec.com" target="_blank">ecowaytec.com</a></p>
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <span class="brand-text">EcoWayMove</span>
+        <p>Grenoble, France</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Accueil</a>
+        <a href="#features">Fonctionnalités</a>
+        <a href="https://www.ecowaytec.com" target="_blank">Site Officiel</a>
+      </div>
+      <div class="footer-contact">
+        <p>Tél : 06 31 63 90 79</p>
+        <p>© 2025 EcoWayTec</p>
+      </div>
     </div>
   </footer>
 
