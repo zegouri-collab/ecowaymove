@@ -5,7 +5,7 @@ function showContactMessage(elementId) {
   msg.innerHTML =
     "<strong>Merci pour votre intérêt !</strong><br>" +
     "Pour une réponse rapide, contactez-nous au <a href='tel:0631639079'>06 31 63 90 79</a><br>" +
-    "ou visitez <a href='ecowaytec@gmail.com' target='_blank'>ecowaytec@gmail.com</a>";
+    "ou visitez <a href='Mail: ecowaytec@gmail.com' target='_blank'>ecowaytec@gmail.com</a>";
   
   msg.style.display = "block";
   
@@ -97,5 +97,6 @@ backToTopBtn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
 
 
